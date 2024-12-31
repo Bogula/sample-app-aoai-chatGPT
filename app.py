@@ -861,7 +861,8 @@ async def ensure_cosmos():
 
 async def generate_title(conversation_messages) -> str:
     ## make sure the messages are sorted by _ts descending
-    title_prompt = "Summarize the conversation so far into a 4-word or less title in German. Do not use any quotation marks or punctuation. Do not include any other commentary or description."
+    entitle_prompt = "Summarize the conversation so far into a 4-word or less title in German. Do not use any quotation marks or punctuation. Do not include any other commentary or description."
+    title_prompt = "Fasse die Konversation auf Deutsch in maximal 3 Wörtern zusammen. Benutze keine Anführungszeichen oder Satzzeichen. Füge keine Kommentare oder Beschreibung hinzu."
 
     messages = [
         {"role": msg["role"], "content": msg["content"]}
